@@ -184,7 +184,7 @@ func (c *Context) evalBinary(n *parser.BinaryOp) (types.Value, error) {
 		return opAdd(l, r)
 	case "-":
 		return opSub(l, r)
-	case "÷":
+	case "/":
 		return opDiv(l, r)
 	case "=":
 		t, err := types.Equal(l, r)

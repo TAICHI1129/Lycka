@@ -1,6 +1,6 @@
 # Lycka
 
-**Lycka** は、演算と条件式を除くすべての処理を「関数」で行うプログラミング言語です。
+**Lycka** は、すべての処理を関数で行うプログラミング言語です。
 条件分岐(`if()`)も繰り返し(`while()`)も並行実行(`concur()`)も、専用の構文ではなく関数です。
 このリポジトリは Go で書かれたインタプリタ(拡張子 `.ly`)です。
 
@@ -8,8 +8,6 @@
 set("n") to(3)
 while(n = 0 = FALSE)(print(n) set("n") to(n - 1))
 ```
-
-仕様書: [docs/SPEC.md](docs/SPEC.md)　／　仕様にない部分の解釈: [docs/implementation-notes.md](docs/implementation-notes.md)
 
 ## ビルドと実行
 

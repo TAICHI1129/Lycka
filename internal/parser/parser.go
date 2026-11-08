@@ -143,7 +143,7 @@ func finishStatements(items []Node) ([]Node, error) {
 //
 //	expr    := add ('=' add)*
 //	add     := mul (('+' | '-') mul)*
-//	mul     := unary ('÷' unary)*
+//	mul     := unary ('/' unary)*
 //	unary   := '-' unary | primary
 //	primary := INT | STRING | '(' expr ')' | TRUE | FALSE | null
 //	         | list '[' [expr (',' expr)*] ']'
@@ -194,7 +194,7 @@ func (p *Parser) parseMul() (Node, error) {
 		if err != nil {
 			return nil, err
 		}
-		left = &BinaryOp{base: base{tokPos(op)}, Op: "÷", Left: left, Right: right}
+		left = &BinaryOp{base: base{tokPos(op)}, Op: "/", Left: left, Right: right}
 	}
 	return left, nil
 }

@@ -22,7 +22,7 @@ const (
 
 var kindNames = [...]string{
 	EOF: "EOF", IDENT: "IDENT", INT: "INT", STRING: "STRING",
-	PLUS: "+", MINUS: "-", EQ: "=", DIV: "÷",
+	PLUS: "+", MINUS: "-", EQ: "=", DIV: "/",
 	LPAREN: "(", RPAREN: ")", LBRACKET: "[", RBRACKET: "]", COMMA: ",",
 }
 

@@ -90,7 +90,7 @@ func singleKind(r rune) (Kind, bool) {
 		return MINUS, true
 	case '=':
 		return EQ, true
-	case '÷':
+	case '/':
 		return DIV, true
 	case '(':
 		return LPAREN, true

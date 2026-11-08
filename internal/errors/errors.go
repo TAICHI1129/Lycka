@@ -1,6 +1,6 @@
 // Package errors は Lycka の階層構造エラーを定義する。
 //
-// 表記形式は仕様書「6. エラー」に従う:
+// 表記形式:
 //
 //	ERROR: Violated The Function Rule (1)
 //	    Violated The "print" Function Rule (1/1)
@@ -98,7 +98,7 @@ var operatorInfos = map[string]opInfo{
 	"+":   {"+", "1"},
 	"-":   {"-", "2"},
 	"=":   {"=", "3"},
-	"÷":   {"÷", "4"},
+	"/":   {"/", "4"},
 	"neg": {"-(unary)", "5"},
 }
 

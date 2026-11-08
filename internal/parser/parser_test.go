@@ -49,8 +49,8 @@ func TestMultipleParenGroupsAreArguments(t *testing.T) {
 }
 
 func TestPrecedence(t *testing.T) {
-	// 1 + 2 ÷ 3 = 4 は ((1 + (2 ÷ 3)) = 4)
-	p := mustParse(t, "print(1 + 2 ÷ 3 = 4)")
+	// 1 + 2 ÷ 3 = 4 は ((1 + (2 / 3)) = 4)
+	p := mustParse(t, "print(1 + 2 / 3 = 4)")
 	expr := p.Body[0].(*Call).Args[0].Items[0].(*BinaryOp)
 	if expr.Op != "=" {
 		t.Fatalf("top op %q, want =", expr.Op)
@@ -59,8 +59,8 @@ func TestPrecedence(t *testing.T) {
 	if add.Op != "+" {
 		t.Fatalf("left op %q, want +", add.Op)
 	}
-	if div := add.Right.(*BinaryOp); div.Op != "÷" {
-		t.Fatalf("right op %q, want ÷", div.Op)
+	if div := add.Right.(*BinaryOp); div.Op != "/" {
+		t.Fatalf("right op %q, want /", div.Op)
 	}
 }
 
